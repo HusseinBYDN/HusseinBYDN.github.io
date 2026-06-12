@@ -1,0 +1,35 @@
+export const experience = [
+  {
+    id: "makhzoumi-internship",
+    role: "Software Development Intern",
+    organization: "Makhzoumi Foundation – IT Program",
+    location: "Beirut, Lebanon",
+    date: "September 2025",
+    priority: 1,
+    description:
+      "Worked on SkillBridge, a full-stack internship management web application with secure role-based workflows, backend services, responsive interfaces, and deployment preparation.",
+    bullets: [
+      "Designed and developed SkillBridge, a full-stack internship management web application.",
+      "Built backend services using ASP.NET Core 9.0 and Entity Framework Core.",
+      "Implemented database schema design, migrations, and RESTful API endpoints.",
+      "Developed responsive Razor Pages integrated with APIs through AJAX and jQuery.",
+      "Implemented Role-Based Access Control for Admin, Coordinator, and Student workflows.",
+      "Enhanced security using HTTPS, bcrypt password hashing, client-side and server-side validation, and OWASP-aligned practices.",
+      "Collaborated in an Agile environment with weekly sprints, code reviews, GitHub version control, and GitFlow branching.",
+      "Conducted testing, performance optimization, and Azure App Service deployment preparation.",
+    ],
+    technologies: [
+      "ASP.NET Core 9.0",
+      "Entity Framework Core",
+      "Razor Pages",
+      "REST APIs",
+      "AJAX",
+      "jQuery",
+      "RBAC",
+      "bcrypt",
+      "OWASP",
+      "GitFlow",
+      "Azure App Service",
+    ],
+  },
+];
