@@ -190,6 +190,22 @@ li {
   color: var(--text);
 }
 
+.active-nav-link {
+  color: var(--text) !important;
+  position: relative;
+}
+
+.active-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-2));
+}
+
 .nav-toggle {
   display: none;
   width: 42px;
@@ -208,6 +224,24 @@ li {
   background: var(--text);
   border-radius: 999px;
   margin: 5px 0;
+}
+
+.nav-toggle-open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle-open span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle-open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.nav-toggle span {
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 
 /* HERO */
@@ -861,6 +895,46 @@ li {
   font-size: 0.9rem;
 }
 
+/* SCROLL TO TOP */
+
+.scroll-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  border: 1px solid rgba(56, 189, 248, 0.32);
+  background:
+    linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(139, 92, 246, 0.16)),
+    rgba(5, 8, 22, 0.88);
+  color: var(--text);
+  font-size: 1.4rem;
+  font-weight: 900;
+  cursor: pointer;
+  box-shadow: 0 20px 60px rgba(56, 189, 248, 0.16);
+  backdrop-filter: blur(16px);
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(12px);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  z-index: 60;
+}
+
+.scroll-to-top-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.scroll-to-top:hover {
+  border-color: rgba(56, 189, 248, 0.5);
+  transform: translateY(-3px);
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 950px) {
@@ -925,11 +999,17 @@ li {
     display: flex;
   }
 
-  .nav-links a {
-    width: 100%;
-    padding: 8px 0;
-    white-space: nowrap;
-  }
+.nav-links a {
+  width: 100%;
+  padding: 8px 0;
+  white-space: nowrap;
+}
+
+.active-nav-link::after {
+  bottom: 2px;
+  right: auto;
+  width: 34px;
+}
 
   .metrics-grid,
   .stats-grid {
