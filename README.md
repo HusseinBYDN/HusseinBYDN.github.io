@@ -1,6 +1,6 @@
 # Hussein Baydoun Portfolio
 
-A modern digital portfolio for Hussein Baydoun, Computer Science student at Phoenicia University, focused on applied AI, software engineering, full-stack development, database systems, and systems programming.
+A modern digital portfolio for Hussein Baydoun, a Computer Science student at Phoenicia University, focused on applied AI, software engineering, full-stack development, database systems, and systems programming.
 
 ## Live Website
 
@@ -19,7 +19,7 @@ https://husseinbydn.github.io/
 
 - Hero / Profile
 - About
-- Featured Projects
+- Projects
 - Skills
 - Experience
 - Education
@@ -27,7 +27,7 @@ https://husseinbydn.github.io/
 - Contact
 - Downloadable CV
 
-## Main Project Areas
+## Main Areas
 
 - Applied AI
 - Medical AI Research
@@ -39,7 +39,32 @@ https://husseinbydn.github.io/
 
 ## Future Updates
 
-Portfolio content is stored in data files inside:
+Portfolio content is stored inside:
 
-```text
 src/data/
+
+To update the portfolio, edit:
+
+- src/data/profile.js
+- src/data/projects.js
+- src/data/skills.js
+- src/data/experience.js
+- src/data/education.js
+- src/data/certifications.js
+
+After editing, run:
+
+npm run build
+
+Then push the changes:
+
+git add .
+git commit -m "Update portfolio content"
+git push
+
+GitHub Actions will automatically deploy the updated website.
+
+## Author
+
+Hussein Baydoun  
+Computer Science Student | Applied AI & Software Engineering
