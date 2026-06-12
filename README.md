@@ -1,16 +1,45 @@
-# React + Vite
+# Hussein Baydoun Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern digital portfolio for Hussein Baydoun, Computer Science student at Phoenicia University, focused on applied AI, software engineering, full-stack development, database systems, and systems programming.
 
-Currently, two official plugins are available:
+## Live Website
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+https://husseinbydn.github.io/
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- Vite
+- JavaScript
+- CSS
+- GitHub Pages
+- GitHub Actions
 
-## Expanding the ESLint configuration
+## Portfolio Sections
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Hero / Profile
+- About
+- Featured Projects
+- Skills
+- Experience
+- Education
+- Certifications
+- Contact
+- Downloadable CV
+
+## Main Project Areas
+
+- Applied AI
+- Medical AI Research
+- ECG Signal Modeling
+- Topological Data Analysis
+- Full-Stack Development
+- Database Systems
+- Systems Programming
+
+## Future Updates
+
+Portfolio content is stored in data files inside:
+
+```text
+src/data/
