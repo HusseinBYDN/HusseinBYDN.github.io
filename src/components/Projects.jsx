@@ -3,7 +3,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [activeCategory, setActiveCategory] = useState("Featured");
 
   const sortedProjects = useMemo(() => {
     return [...projects].sort((a, b) => a.priority - b.priority);
@@ -14,7 +14,7 @@ export default function Projects() {
       ...new Set(sortedProjects.map((project) => project.category)),
     ];
 
-    return ["All", "Featured", ...uniqueCategories];
+    return ["Featured", "All", ...uniqueCategories];
   }, [sortedProjects]);
 
   const visibleProjects = useMemo(() => {
@@ -37,9 +37,9 @@ export default function Projects() {
         <p className="eyebrow">Selected Work</p>
         <h2>Projects</h2>
         <p>
-          Selected academic, research, and software engineering work. The projects
-            combine applied AI, medical signal modeling, full-stack systems, database
-            design, and low-level programming.
+          Selected academic, research, and software engineering work. The
+          projects combine applied AI, medical signal modeling, full-stack
+          systems, database design, and low-level programming.
         </p>
       </div>
 

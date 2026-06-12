@@ -1,10 +1,16 @@
+import { useState } from "react";
+
 export default function ProjectCard({ project }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   return (
     <article className={`project-card ${project.featured ? "featured-card" : ""}`}>
       <div className="project-topline">
         <span>{project.category}</span>
         <span>{project.status}</span>
       </div>
+
+      {project.featured && <p className="featured-label">Featured Project</p>}
 
       <h3>{project.title}</h3>
 
@@ -31,32 +37,48 @@ export default function ProjectCard({ project }) {
         ))}
       </div>
 
-      <ul className="project-highlights">
-        {project.highlights.slice(0, 3).map((highlight) => (
-          <li key={`${project.id}-${highlight}`}>{highlight}</li>
-        ))}
-      </ul>
+      {isExpanded && (
+        <div className="project-expanded">
+          <p>{project.fullDescription}</p>
 
-      <div className="project-links">
-        {project.links.github ? (
-          <a href={project.links.github} target="_blank" rel="noreferrer">
-            GitHub
-          </a>
-        ) : (
-          <span className="disabled-link">Repository available upon request</span>
-        )}
+          <ul className="project-highlights">
+            {project.highlights.map((highlight) => (
+              <li key={`${project.id}-${highlight}`}>{highlight}</li>
+            ))}
+          </ul>
+        </div>
+      )}
 
-        {project.links.demo && (
-          <a href={project.links.demo} target="_blank" rel="noreferrer">
-            Live Demo
-          </a>
-        )}
+      <div className="project-actions">
+        <button
+          type="button"
+          className="details-btn"
+          onClick={() => setIsExpanded((current) => !current)}
+        >
+          {isExpanded ? "Hide Details" : "View Details"}
+        </button>
 
-        {project.links.report && (
-          <a href={project.links.report} target="_blank" rel="noreferrer">
-            Report
-          </a>
-        )}
+        <div className="project-links">
+          {project.links.github ? (
+            <a href={project.links.github} target="_blank" rel="noreferrer">
+              GitHub
+            </a>
+          ) : (
+            <span className="disabled-link">Repository available upon request</span>
+          )}
+
+          {project.links.demo && (
+            <a href={project.links.demo} target="_blank" rel="noreferrer">
+              Live Demo
+            </a>
+          )}
+
+          {project.links.report && (
+            <a href={project.links.report} target="_blank" rel="noreferrer">
+              Report
+            </a>
+          )}
+        </div>
       </div>
     </article>
   );
